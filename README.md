@@ -2,6 +2,10 @@
 Python code from influxdays 2022 api demo.
 Code is currently set up for a local instance of influxdb but can easily be changed to work with the cloud.
 
+
+<img align="right" width="250" height="250" src="https://user-images.githubusercontent.com/17863490/189961663-0d599bc4-687b-4ce4-aa96-940987d24533.png">
+
+
 # management
 Shows how to use the python client library to create orgs, buckets, tasks, and users.
 
