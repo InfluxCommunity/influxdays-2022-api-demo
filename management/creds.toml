@@ -1,0 +1,3 @@
+[influx2]
+url="http://localhost:8086"
+token="my-token"
