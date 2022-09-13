@@ -1,28 +1,31 @@
-# influxdays-2022-api-demo
-Python code from influxdays 2022 api demo.
-Code is currently set up for a local instance of influxdb but can easily be changed to work with the cloud.
+## influxdays-2022-api-demo
 
+ython code from influxdays 2022 api demo.
+Code is currently set up for a local instance of influxdb but can easily be changed to work with InlfluxDB Cloud via updating the credentials files.
 
-<img align="right" width="250" height="250" src="https://user-images.githubusercontent.com/17863490/189961663-0d599bc4-687b-4ce4-aa96-940987d24533.png">
+## Management
 
+Demonstrates how to use the Python client library to create orgs, buckets, tasks, and users. This demo uses a YAML file to define a new organization with users, buckets, and predefined tasks that need to be applied. The YAML file is parsed and the various resources created if they do not already exist.
 
-# management
-Shows how to use the python client library to create orgs, buckets, tasks, and users.
+```shell
+cd management
+./demo.py
+```
 
-`cd management`
+## Write
 
-`python3 demo.py --creds creds.toml --org devops.yaml`
+Demonstrates how to write a file of data to an InfluxDB bucket. This demo writes daily vix stock price data for the past couple of years. The data is already in Line Protocol, read in, and written in one big write. Users could adapte this demo to use batching for larger data sets.
 
-# write
-Shows how to write a file of data to an influxdb bucket.
+```shell
+cd write
+./demo.py
+```
 
-`cd write`
+## Query
 
-`python3 demo.py`
+Demonstrates how to query data out of an InfluxDB bucket and report the data in a couple different formats. In this demo, two idential Flux queries are used to pull out a single or couple of records from the previous write demo. Then the data is printed in both JSON and CSV formats.
 
-# query
-Shows how to query data out of influxdb.
-
-`cd query`
-
-`python3 demo.py`
+```shell
+cd query
+./demo.py
+```
